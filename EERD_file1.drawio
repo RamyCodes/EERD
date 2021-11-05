@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-05T13:07:06.791Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="_vNNxGlzOOGjEcDFmmAF" version="15.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-05T13:32:11.522Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="-FUnc-eL3f6JeVEadbZF" version="15.6.8" type="github">
   <diagram id="BTSECrfvzCVwRJHnbUCh" name="Page-1">
-    <mxGraphModel dx="2676" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1275" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -321,6 +321,42 @@
             <mxPoint x="1010" y="370" as="sourcePoint" />
             <mxPoint x="1120" y="360" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-17" value="&lt;font style=&quot;font-size: 36px&quot;&gt;Job&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="500" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-22" value="title" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="510" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-23" value="description" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="915" y="540" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-24" value="department" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="580" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-25" value="start_date" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="875" y="620" width="65" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-26" value="end_date" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="815" y="650" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-27" value="duration" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="480" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-28" value="application_deadline" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="670" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-29" value="num_of_available_internships" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="635" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-31" value="&lt;font style=&quot;font-size: 12px&quot;&gt;allowed_faculties&lt;/font&gt;" style="ellipse;shape=doubleEllipse;margin=3;whiteSpace=wrap;html=1;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="575" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-32" value="salary_range" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="530" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-33" value="qualifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="975" y="480" width="85" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
