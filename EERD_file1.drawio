@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-05T13:32:11.522Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="-FUnc-eL3f6JeVEadbZF" version="15.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-05T13:33:01.137Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="1oONQneEu_P0-Bcxb-Fq" version="15.6.8" type="github">
   <diagram id="BTSECrfvzCVwRJHnbUCh" name="Page-1">
     <mxGraphModel dx="1275" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -357,6 +357,12 @@
         </mxCell>
         <mxCell id="Lkmf8EzCWm1hWrgWqMC2-33" value="qualifications" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="975" y="480" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-35" value="&lt;font style=&quot;font-size: 12px&quot;&gt;required_semester&lt;/font&gt;" style="ellipse;shape=doubleEllipse;margin=3;whiteSpace=wrap;html=1;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="990" y="690" width="125" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lkmf8EzCWm1hWrgWqMC2-37" value="location" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="805" y="710" width="55" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
