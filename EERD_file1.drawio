@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-24T16:28:31.656Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="E184G0SZ0PepeTbj1V1s" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-24T17:40:17.564Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="bcCGNseHVeTEEKpa0tQu" version="15.7.3" type="github">
   <diagram id="BTSECrfvzCVwRJHnbUCh" name="Page-1">
-    <mxGraphModel dx="4126" dy="-959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3418" dy="-1257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -874,10 +874,10 @@
         <mxCell id="qx3YzDs0TzRe65aPe66y-47" value="&lt;font style=&quot;font-size: 18px&quot;&gt;CV Builder&lt;/font&gt;" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="332.5" y="3750.01" width="170" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="qx3YzDs0TzRe65aPe66y-49" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="TxsOC6oO154zUz7L_qCr-116" target="qx3YzDs0TzRe65aPe66y-47" edge="1">
+        <mxCell id="qx3YzDs0TzRe65aPe66y-49" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;rounded=0;entryX=0.538;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TxsOC6oO154zUz7L_qCr-116" target="qx3YzDs0TzRe65aPe66y-47" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="382.5" y="3415.01" as="sourcePoint" />
-            <mxPoint x="417.5" y="3735.01" as="targetPoint" />
+            <mxPoint x="418" y="3740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="qx3YzDs0TzRe65aPe66y-52" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TxsOC6oO154zUz7L_qCr-116" target="SrommGHa16pYw0LAVB4a-3" edge="1">
@@ -1179,6 +1179,9 @@
         </mxCell>
         <mxCell id="Btcamv6DFYai6Q_pgWEP-9" value="reviews" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="1525" y="2760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-11" value="assigns" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="192.5" y="3320" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
