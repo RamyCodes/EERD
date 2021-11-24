@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-24T16:26:58.715Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="qj5OOeNxhqqzeOY9l6G7" version="15.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-24T16:28:31.656Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="E184G0SZ0PepeTbj1V1s" version="15.7.3" type="github">
   <diagram id="BTSECrfvzCVwRJHnbUCh" name="Page-1">
-    <mxGraphModel dx="3122" dy="-1472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4126" dy="-959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1153,16 +1153,16 @@
             <mxPoint x="-270" y="2920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Btcamv6DFYai6Q_pgWEP-1" value="Reviews" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-1" value="reviews" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-510" y="2720" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Btcamv6DFYai6Q_pgWEP-2" value="Has" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-2" value="has" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-1095" y="3440" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Btcamv6DFYai6Q_pgWEP-3" value="Assigns" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-3" value="assigns" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-800" y="3420.01" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Btcamv6DFYai6Q_pgWEP-4" value="Applies For" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-4" value="applies_for" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="890" y="3170" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Btcamv6DFYai6Q_pgWEP-5" value="Job/Internship" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
@@ -1177,7 +1177,7 @@
             <mxPoint x="1423.0225782429789" y="3480.644316563984" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Btcamv6DFYai6Q_pgWEP-9" value="Reviews" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="Btcamv6DFYai6Q_pgWEP-9" value="reviews" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="1525" y="2760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
