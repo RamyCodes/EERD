@@ -219,7 +219,20 @@ II_id int,
 coc_id int,
 eligibility VARCHAR(30),
 PRIMARY KEY (student_id,II_id),
-FOREIGN KEY (student_ID) REFERENCES Student(ID),
+FOREIGN KEY (student_id) REFERENCES Student(ID),
 FOREIGN KEY (II_id) REFERENCES Industrial_Internship(ID),
 FOREIGN KEY (coc_id) REFERENCES Career_Office_Coordinator(ID),
+);
+
+CREATE Table Progress_report
+(
+student_id int,
+date datetime,
+numeric_state int,
+evaluation VARCHAR(30), -- sure?
+description VARCHAR(30), -- sure?
+advisor_id int,
+PRIMARY KEY(student_id,date),
+FOREIGN KEY (student_id) REFERENCES Student(ID),
+FOREIGN KEY (advisor_id) REFERENCES Admin(ID),
 );
