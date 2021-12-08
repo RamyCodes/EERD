@@ -1,37 +1,41 @@
-﻿CREATE Table "User"
+﻿CREATE Table Users
 (
 ID int PRIMARY KEY IDENTITY,
 first_name VARCHAR(20),
 middle_name VARCHAR(20),
 last_name VARCHAR(20),
 email VARCHAR(30),
-"password" VARCHAR(30),
+passwordd VARCHAR(30),
 );
 
 CREATE Table Student
 (
-ID int IDENTITY,
+ID int,
 GIU_ID int,
 birth_date datetime,
 age AS (YEAR(CURRENT_TIMESTAMP) - YEAR(birth_date)),
---semester int, or varchar????
+semester VARCHAR(30),
 faculty VARCHAR(30),
 major VARCHAR(30),
 GPA DECIMAL(4,2),
 address VARCHAR(40),
 --CV ??? new object
 --coverletter ? same
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Student_phoneNumber
 (
-ID int PRIMARY KEY,
+ID int,
 number int,
+PRIMARY KEY (ID,number),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Employer
 (
-ID int PRIMARY KEY,
+ID int,
 company_name VARCHAR(20),
 address VARCHAR(30),
 phone_number int,
@@ -43,58 +47,74 @@ country_of_origin VARCHAR(56),
 industry VARCHAR(30),
 number_of_current_employees int,
 products VARCHAR(30),
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Contact_person
 (
-employer_ID int PRIMARY KEY,
-"name" VARCHAR(30),
+employer_ID int,
+namee VARCHAR(30),
 job_title VARCHAR(30),
 email VARCHAR(30),
 mobile_number int,
 fax int,
+PRIMARY KEY (employer_ID),
+FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
 );
 
 CREATE Table HR_Director
 (
-employer_ID int PRIMARY KEY,
-"name" VARCHAR(30),
+employer_ID int,
+namee VARCHAR(30),
 email VARCHAR(30),
+PRIMARY KEY (employer_ID),
+FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
 );
 
 CREATE Table Admin
 (
-ID int PRIMARY KEY
+ID int,
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Faculty_Representative
 (
-ID int PRIMARY KEY,
+ID int,
 faculty VARCHAR(30),
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Academic_Advisor
 (
-ID int PRIMARY KEY,
+ID int,
 faculty VARCHAR(30),
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Career_Office_Coordinator
 (
-ID int PRIMARY KEY,
+ID int,
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Users(ID),
 );
 
 CREATE Table Review_Profile
 (
-employer_id int PRIMARY KEY,
+employer_id int,
 admin_id int,
-"status" VARCHAR(30),
+statuss VARCHAR(30),
 reason VARCHAR(30),
+PRIMARY KEY (employer_id),
+FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
+FOREIGN KEY (admin_id) REFERENCES Admin(ID),
 );
 
 CREATE Table Job
 (
-ID int PRIMARY KEY,
+ID int,
 description VARCHAR(30),
 department VARCHAR(30),
 start_date datetime,
@@ -112,6 +132,9 @@ employer_id int,
 admin_id int,
 visibility VARCHAR(30),
 reason VARCHAR(30),
+PRIMARY KEY (employer_id),
+FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
+FOREIGN KEY (admin_id) REFERENCES Admin(ID),
 );
 
 CREATE Table Allowed_faculties
@@ -119,6 +142,7 @@ CREATE Table Allowed_faculties
 ID int,
 faculty_name VARCHAR(30),
 PRIMARY KEY (ID,faculty_name),
+FOREIGN KEY (ID) REFERENCES Job(ID),
 );
 
 CREATE Table Required_semesters
@@ -126,25 +150,39 @@ CREATE Table Required_semesters
 ID int,
 --semester VARCHAR(30),
 PRIMARY KEY (ID,semester),
+FOREIGN KEY (ID) REFERENCES Job(ID),
 );
 
 CREATE Table Part_time
 (
-ID int PRIMARY KEY,
+ID int,
 workdays VARCHAR(30),
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Job(ID),
 );
+
+
+
+-- ADD 4 NEW TABLES FROM UPDATED SCHEMA
+
+
+
 
 CREATE TABLE Industrial_Internship
 (
-ID int PRIMARY KEY,
+ID int,
 status VARCHAR(30),
 aa_id int,
 facultyRep_id int,
+PRIMARY KEY (ID),
+FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (aa_id) REFERENCES Academic_Advisor(ID),
+FOREIGN KEY (facultyRep_id) REFERENCES Faculty_Representative(ID),
 );
 
 CREATE Table CV_Builder
 (
-personal_mail VARCHAR(30) PRIMARY KEY,
+personal_mail VARCHAR(30),
 education VARCHAR(30),
 extracurricular_activities VARCHAR(30),
 linkedIn_link VARCHAR(30),
@@ -160,6 +198,8 @@ GPA DECIMAL(4,2),
 semester VARCHAR(30),
 faculty VARCHAR(30),
 major VARCHAR(30),
+PRIMARY KEY (personal_mail),
+FOREIGN KEY (student_id) REFERENCES Student(ID),
 );
 
 CREATE Table Apply
@@ -168,6 +208,8 @@ student_ID int,
 job_ID int,
 application_status VARCHAR(30),
 PRIMARY KEY (student_ID,job_ID),
+FOREIGN KEY (student_ID) REFERENCES Student(ID),
+FOREIGN KEY (job_ID) REFERENCES Job(ID),
 );
 
 CREATE Table Eligible
@@ -177,4 +219,7 @@ II_id int,
 coc_id int,
 eligibility VARCHAR(30),
 PRIMARY KEY (student_id,II_id),
+FOREIGN KEY (student_ID) REFERENCES Student(ID),
+FOREIGN KEY (II_id) REFERENCES Industrial_Internship(ID),
+FOREIGN KEY (coc_id) REFERENCES Career_Office_Coordinator(ID),
 );
