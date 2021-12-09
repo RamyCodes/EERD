@@ -42,7 +42,7 @@ phone_number int,
 fax int,
 website VARCHAR(30),
 type_of_business VARCHAR(10),
-establishment_year YEAR,
+establishment_year smallint,
 country_of_origin VARCHAR(56),
 industry VARCHAR(30),
 number_of_current_employees int,
@@ -75,6 +75,7 @@ FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
 CREATE Table Admin_
 (
 ID int,
+PRIMARY KEY(ID),
 FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
@@ -108,7 +109,7 @@ admin_id int,
 status_ VARCHAR(30),
 reason VARCHAR(30),
 PRIMARY KEY (employer_id),
-FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
+FOREIGN KEY (employer_id) REFERENCES Employer(ID),
 FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
@@ -119,7 +120,7 @@ description_ VARCHAR(30),
 department VARCHAR(30),
 start_date_ datetime,
 end_date datetime,
-duration AS (datetime(end_date) - datetime(start_date)),
+duration AS ((end_date) - (start_date_)),
 application_deadline datetime,
 num_of_available_internships int,
 salary_range  VARCHAR(30),
@@ -132,8 +133,8 @@ employer_id int,
 admin_id int,
 visibility bit,
 reason VARCHAR(30),
-PRIMARY KEY (employer_id),
-FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
+PRIMARY KEY (ID),
+FOREIGN KEY (employer_id) REFERENCES Employer(ID),
 FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
@@ -253,7 +254,7 @@ numeric_state int,
 evaluation VARCHAR(30), -- sure?
 description_ VARCHAR(30), -- sure?
 advisor_id int,
-PRIMARY KEY(student_id,date),
+PRIMARY KEY(student_id,date_),
 FOREIGN KEY (student_id) REFERENCES Student(ID),
 FOREIGN KEY (advisor_id) REFERENCES Admin_(ID),
 );
