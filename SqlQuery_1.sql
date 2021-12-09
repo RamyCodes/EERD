@@ -1,11 +1,11 @@
-﻿CREATE Table Users
+CREATE Table User_
 (
 ID int PRIMARY KEY IDENTITY,
 first_name VARCHAR(20),
 middle_name VARCHAR(20),
 last_name VARCHAR(20),
 email VARCHAR(30),
-passwordd VARCHAR(30),
+password_ VARCHAR(30),
 );
 
 CREATE Table Student
@@ -18,11 +18,11 @@ semester VARCHAR(30),
 faculty VARCHAR(30),
 major VARCHAR(30),
 GPA DECIMAL(4,2),
-address VARCHAR(40),
---CV ??? new object
---coverletter ? same
+address_ VARCHAR(40),
+CV VARCHAR(255),
+coverletter VARCHAR(255),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Student_phoneNumber
@@ -30,14 +30,14 @@ CREATE Table Student_phoneNumber
 ID int,
 number int,
 PRIMARY KEY (ID,number),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Employer
 (
 ID int,
 company_name VARCHAR(20),
-address VARCHAR(30),
+address_ VARCHAR(30),
 phone_number int,
 fax int,
 website VARCHAR(30),
@@ -48,7 +48,7 @@ industry VARCHAR(30),
 number_of_current_employees int,
 products VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Contact_person
@@ -72,10 +72,10 @@ PRIMARY KEY (employer_ID),
 FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
 );
 
-CREATE Table Admin
+CREATE Table Admin_
 (
 ID int,
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Faculty_Representative
@@ -83,7 +83,7 @@ CREATE Table Faculty_Representative
 ID int,
 faculty VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Academic_Advisor
@@ -91,50 +91,50 @@ CREATE Table Academic_Advisor
 ID int,
 faculty VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Career_Office_Coordinator
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Users(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID),
 );
 
 CREATE Table Review_Profile
 (
 employer_id int,
 admin_id int,
-statuss VARCHAR(30),
+status_ VARCHAR(30),
 reason VARCHAR(30),
 PRIMARY KEY (employer_id),
 FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
-FOREIGN KEY (admin_id) REFERENCES Admin(ID),
+FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
 CREATE Table Job
 (
 ID int,
-description VARCHAR(30),
+description_ VARCHAR(30),
 department VARCHAR(30),
-start_date datetime,
+start_date_ datetime,
 end_date datetime,
 duration AS (datetime(end_date) - datetime(start_date)),
 application_deadline datetime,
 num_of_available_internships int,
---salary_range  RANGE
+salary_range  VARCHAR(30),
 qualifications VARCHAR(60),
-location VARCHAR(30),
+location_ VARCHAR(30),
 application_link VARCHAR(30),
 application_email VARCHAR(30),
 job_type VARCHAR(30),
 employer_id int,
 admin_id int,
-visibility VARCHAR(30),
+visibility bit,
 reason VARCHAR(30),
 PRIMARY KEY (employer_id),
 FOREIGN KEY (employer_id) REFERENCES Employer(employer_id),
-FOREIGN KEY (admin_id) REFERENCES Admin(ID),
+FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
 CREATE Table Allowed_faculties
@@ -148,7 +148,7 @@ FOREIGN KEY (ID) REFERENCES Job(ID),
 CREATE Table Required_semesters
 (
 ID int,
---semester VARCHAR(30),
+semester VARCHAR(30),
 PRIMARY KEY (ID,semester),
 FOREIGN KEY (ID) REFERENCES Job(ID),
 );
@@ -184,6 +184,7 @@ FOREIGN KEY (ID) REFERENCES Job(ID),
 
 CREATE TABLE Project_based
 (
+ID int,
 PRIMARY KEY (ID),
 FOREIGN KEY (ID) REFERENCES Job(ID),
 );
@@ -191,7 +192,7 @@ FOREIGN KEY (ID) REFERENCES Job(ID),
 CREATE TABLE Industrial_Internship
 (
 ID int,
-status VARCHAR(30),
+status_ VARCHAR(30),
 aa_id int,
 facultyRep_id int,
 PRIMARY KEY (ID),
@@ -247,12 +248,12 @@ FOREIGN KEY (coc_id) REFERENCES Career_Office_Coordinator(ID),
 CREATE Table Progress_report
 (
 student_id int,
-date datetime,
+date_ datetime,
 numeric_state int,
 evaluation VARCHAR(30), -- sure?
-description VARCHAR(30), -- sure?
+description_ VARCHAR(30), -- sure?
 advisor_id int,
 PRIMARY KEY(student_id,date),
 FOREIGN KEY (student_id) REFERENCES Student(ID),
-FOREIGN KEY (advisor_id) REFERENCES Admin(ID),
+FOREIGN KEY (advisor_id) REFERENCES Admin_(ID),
 );
