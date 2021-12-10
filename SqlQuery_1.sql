@@ -224,14 +224,14 @@ semester int,
 faculty VARCHAR(30),
 major VARCHAR(30),
 PRIMARY KEY (personal_mail),
-FOREIGN KEY (student_id) REFERENCES Student(ID),
+FOREIGN KEY (student_id) REFERENCES Student(ID) ON UPDATE CASCADE,
 );
 
 CREATE Table Apply
 (
 student_ID int,
 job_ID int,
-application_status VARCHAR(20),
+application_status VARCHAR(20) DEFAULT 'Pending',
 PRIMARY KEY (student_ID,job_ID),
 FOREIGN KEY (student_ID) REFERENCES Student(ID),
 FOREIGN KEY (job_ID) REFERENCES Job(ID),
