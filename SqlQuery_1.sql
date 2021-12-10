@@ -106,7 +106,7 @@ CREATE Table Review_Profile
 (
 employer_id int,
 admin_id int,
-status_ VARCHAR(30),
+status_ bit,
 reason VARCHAR(30),
 PRIMARY KEY (employer_id),
 FOREIGN KEY (employer_id) REFERENCES Employer(ID),
@@ -193,7 +193,7 @@ FOREIGN KEY (ID) REFERENCES Job(ID),
 CREATE TABLE Industrial_Internship
 (
 ID int,
-status_ VARCHAR(30),
+status_ bit,
 aa_id int,
 facultyRep_id int,
 PRIMARY KEY (ID),
@@ -228,7 +228,7 @@ CREATE Table Apply
 (
 student_ID int,
 job_ID int,
-application_status VARCHAR(30),
+application_status bit,
 PRIMARY KEY (student_ID,job_ID),
 FOREIGN KEY (student_ID) REFERENCES Student(ID),
 FOREIGN KEY (job_ID) REFERENCES Job(ID),
