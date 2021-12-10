@@ -12,6 +12,9 @@ CREATE Table Student
 (
 ID int,
 GIU_ID int,
+first_name VARCHAR(30),
+middle_name VARCHAR(30),
+last_name VARCHAR(30),
 birth_date datetime,
 age AS (YEAR(CURRENT_TIMESTAMP) - YEAR(birth_date)),
 semester int,
