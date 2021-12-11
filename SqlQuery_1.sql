@@ -227,7 +227,7 @@ PRIMARY KEY (personal_mail),
 FOREIGN KEY (student_id) REFERENCES Student(ID) ON UPDATE CASCADE,
 );
 
-CREATE Table Apply
+CREATE Table Apply_
 (
 student_ID int,
 job_ID int,
