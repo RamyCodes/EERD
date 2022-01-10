@@ -25,7 +25,7 @@ address_ VARCHAR(40),
 CV VARCHAR(255),
 coverletter VARCHAR(255),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Student_phoneNumber
@@ -33,7 +33,7 @@ CREATE Table Student_phoneNumber
 ID int,
 number int,
 PRIMARY KEY (ID,number),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Employer
@@ -51,7 +51,7 @@ industry VARCHAR(30),
 number_of_current_employees int,
 products VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Contact_person
@@ -63,7 +63,7 @@ email VARCHAR(50),
 mobile_number VARCHAR(30),
 fax VARCHAR(50),
 PRIMARY KEY (employer_ID),
-FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
+FOREIGN KEY (employer_ID) REFERENCES Employer(ID) ON DELETE CASCADE,
 );
 
 CREATE Table HR_Director
@@ -72,14 +72,14 @@ employer_ID int,
 namee VARCHAR(30),
 email VARCHAR(50),
 PRIMARY KEY (employer_ID),
-FOREIGN KEY (employer_ID) REFERENCES Employer(ID),
+FOREIGN KEY (employer_ID) REFERENCES Employer(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Admin_
 (
 ID int,
 PRIMARY KEY(ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Faculty_Representative
@@ -87,7 +87,7 @@ CREATE Table Faculty_Representative
 ID int,
 faculty VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Academic_Advisor
@@ -95,14 +95,14 @@ CREATE Table Academic_Advisor
 ID int,
 faculty VARCHAR(30),
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Career_Office_Coordinator
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES User_(ID),
+FOREIGN KEY (ID) REFERENCES User_(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Review_Profile
@@ -112,7 +112,7 @@ admin_id int,
 status_ bit,
 reason VARCHAR(100),
 PRIMARY KEY (employer_id),
-FOREIGN KEY (employer_id) REFERENCES Employer(ID),
+FOREIGN KEY (employer_id) REFERENCES Employer(ID) ON DELETE CASCADE,
 FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
@@ -137,7 +137,7 @@ admin_id int,
 visibility bit,
 reason VARCHAR(100),
 PRIMARY KEY (ID),
-FOREIGN KEY (employer_id) REFERENCES Employer(ID),
+FOREIGN KEY (employer_id) REFERENCES Employer(ID) ON DELETE CASCADE,
 FOREIGN KEY (admin_id) REFERENCES Admin_(ID),
 );
 
@@ -146,7 +146,7 @@ CREATE Table Allowed_faculties
 ID int,
 faculty_name VARCHAR(30),
 PRIMARY KEY (ID,faculty_name),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Required_semesters
@@ -154,7 +154,7 @@ CREATE Table Required_semesters
 ID int,
 semester int,
 PRIMARY KEY (ID,semester),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE Table Part_time
@@ -162,35 +162,35 @@ CREATE Table Part_time
 ID int,
 workdays int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE TABLE Freelance
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE TABLE Summer_internship
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE TABLE Full_time
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE TABLE Project_based
 (
 ID int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 );
 
 CREATE TABLE Industrial_Internship
@@ -200,7 +200,7 @@ status_ bit,
 aa_id int,
 facultyRep_id int,
 PRIMARY KEY (ID),
-FOREIGN KEY (ID) REFERENCES Job(ID),
+FOREIGN KEY (ID) REFERENCES Job(ID) ON DELETE CASCADE,
 FOREIGN KEY (aa_id) REFERENCES Academic_Advisor(ID),
 FOREIGN KEY (facultyRep_id) REFERENCES Faculty_Representative(ID),
 );
@@ -233,7 +233,7 @@ student_ID int,
 job_ID int,
 application_status VARCHAR(20) DEFAULT 'Pending',
 PRIMARY KEY (student_ID,job_ID),
-FOREIGN KEY (student_ID) REFERENCES Student(ID),
+FOREIGN KEY (student_ID) REFERENCES Student(ID) ON DELETE CASCADE,
 FOREIGN KEY (job_ID) REFERENCES Job(ID),
 );
 
@@ -244,7 +244,7 @@ II_id int,
 coc_id int,
 eligibility bit,
 PRIMARY KEY (student_id,II_id),
-FOREIGN KEY (student_id) REFERENCES Student(ID),
+FOREIGN KEY (student_id) REFERENCES Student(ID) ON DELETE CASCADE,
 FOREIGN KEY (II_id) REFERENCES Industrial_Internship(ID),
 FOREIGN KEY (coc_id) REFERENCES Career_Office_Coordinator(ID),
 );
@@ -258,6 +258,6 @@ evaluation VARCHAR(100),
 description_ VARCHAR(100),
 advisor_id int,
 PRIMARY KEY(student_id,date_),
-FOREIGN KEY (student_id) REFERENCES Student(ID),
+FOREIGN KEY (student_id) REFERENCES Student(ID) ON DELETE CASCADE,
 FOREIGN KEY (advisor_id) REFERENCES Admin_(ID),
 );
